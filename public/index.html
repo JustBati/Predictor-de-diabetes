@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PorcentajeDeSalud</title>
+    <meta name="description" content="Página Web de Estadisticas de Enfermedades">
+    
+    <!-- Preload -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                   <h1 class="logo__nombre no-margin centrar-texto">Estadisticas <span class="logo__bold">DeSalud</span> </h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="./Analisis.html" class="navegacion__enlace">¿Como funciona el análisis de esta pagina?</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header__texto">
+            <h2 class="no-margin">Análisis Estadístico de Salud</h2>
+            <p class="no-margin">Descubre patrones, comprende tendencias y toma decisiones informadas sobre tu bienestar.</p>
+        </div>
+    </header>
+    <div class="contenedor contenido-principal">
+        <main class="sidebar">
+            <h3>Estadistica de Enfermedades</h3>
+            
+            <form id="health-form" class="formulario">
+                <div class="campo">
+                    <label class="campo_label">High Blood Pressure</label>
+                    <select name="HighBP">
+                        <option value="1">Si tienes presión alta</option>
+                        <option value="0">No tienes presión alta</option>
+                    </select>
+                </div>
+            
+                <!-- High Cholesterol -->
+                <div class="campo">
+                    <label class="campo_label">High Cholesterol</label>
+                    <select name="HighChol">
+                        <option value="1">Si tienes colesterol alto</option>
+                        <option value="0">No tienes colesterol alto</option>
+                    </select>
+                </div>
+            
+                <!-- Cholesterol Check -->
+                <div class="campo">
+                    <label class="campo_label">Cholesterol Check</label>
+                    <select name="CholCheck">
+                        <option value="1">Si has tenido chequeos en los últimos 5 años</option>
+                        <option value="0">No has tenido chequeos en 5 años</option>
+                    </select>
+                </div>
+            
+                <!-- BMI -->
+                <div class="campo">
+                    <label class="campo_label">BMI (Indice de masa corporal)</label>
+                    <input type="number" name="BMI" min="1" max="10000">
+                </div>
+            
+                <!-- Smoker -->
+                <div class="campo">
+                    <label class="campo_label">Smoker</label>
+                    <select name="Smoker">
+                        <option value="1">Si al menos has fumado 5 cajetillas en tu vida</option>
+                        <option value="0">Si has fumado menos de 5 cajetillas en tu vida</option>
+                    </select>
+                </div>
+            
+                <!-- Stroke -->
+                <div class="campo">
+                    <label class="campo_label">Stroke</label>
+                    <select name="Stroke">
+                        <option value="1">Si has tenido ataques cardiacos</option>
+                        <option value="0">No has tenido ataques cardiacos</option>
+                    </select>
+                </div>
+            
+                <!-- Heart Disease or Attack -->
+                <div class="campo">
+                    <label class="campo_label">Heart Disease or Attack</label>
+                    <select name="HeartDiseaseorAttack">
+                        <option value="1">Si tienes enfermedad coronaria o infarto de mioacardio</option>
+                        <option value="0">No tienes enfermedad coronaria o infarto en el mioacardio</option>
+                    </select>
+                </div>
+            
+                <!-- Physical Activity -->
+                <div class="campo">
+                    <label class="campo_label">Physical Activity</label>
+                    <select name="PhysActivity">
+                        <option value="1">Si has tenido actividad física en el último mes</option>
+                        <option value="0">No has tenido actividad física en el último mes</option>
+                    </select>
+                </div>
+            
+                <!-- Fruits -->
+                <div class="campo">
+                    <label class="campo_label">Fruits</label>
+                    <select name="Fruits">
+                        <option value="1">Consumes al menos una fruta al día</option>
+                        <option value="0">No consumes ninguna fruta al día</option>
+                    </select>
+                </div>
+            
+                <!-- Vegetables -->
+                <div class="campo">
+                    <label class="campo_label">Vegetables</label>
+                    <select name="Veggies">
+                        <option value="1">Consumes al menos un vegetal al día</option>
+                        <option value="0">No consumes ningún vegetal al día</option>
+                    </select>
+                </div>
+            
+                <!-- Heavy Alcohol Consumption -->
+                <div class="campo">
+                    <label class="campo_label">Heavy Alcohol Consumption</label>
+                    <select name="HvyAlcoholConsump">
+                        <option value="1">Si eres hombre y tomas 14 o más tragos a la semana o Si eres mujer y tomas 7 o más tragos a la semana</option>
+                        <option value="0">Si eres hombre y tomas menos de 14 tragos a la semana o Si eres mujer y tomas menos de 7 tragos a la semana</option>
+                    </select>
+                </div>
+            
+                <!-- Any Healthcare -->
+                <div class="campo">
+                    <label class="campo_label">Any Healthcare</label>
+                    <select name="AnyHealthcare">
+                        <option value="1">Si tienes seguro</option>
+                        <option value="0">No tienes seguro</option>
+                    </select>
+                </div>
+            
+                <!-- No Doctor because of Cost -->
+                <div class="campo">
+                    <label class="campo_label">No Doctor because of Cost</label>
+                    <select name="NoDocbcCost">
+                        <option value="1">No has podido ir al médico por falta de dinero</option>
+                        <option value="0">Si no tienes problemas de dinero para ir al doctor en el último año</option>
+                    </select>
+                </div>
+            
+                <!-- General Health -->
+                <div class="campo">
+                    <label class="campo_label">General Health</label>
+                    <select name="GenHlth">
+                        <option value="1">Excelente</option>
+                        <option value="2">Muy bueno</option>
+                        <option value="3">Bueno</option>
+                        <option value="4">Regular</option>
+                        <option value="5">Poco</option>
+                    </select>
+                </div>
+            
+                <!-- Mental Health -->
+                <div class="campo">
+                    <label class="campo_label">Mental Health</label>
+                    <!-- Nota: Aquí se podría considerar un campo de entrada numérico en lugar de un menú desplegable debido a la variedad de valores posibles. -->
+                    <input type="number" name="MentHlth" min="0" max="30">
+                </div>
+            
+                <!-- Physical Health -->
+                <div class="campo">
+                    <label class="campo_label">Physical Health</label>
+                    <!-- Nota: Aquí se podría considerar un campo de entrada numérico en lugar de un menú desplegable debido a la variedad de valores posibles. -->
+                    <input type="number" name="PhysHlth" min="0" max="30">
+                </div>
+            
+                <!-- Difficulty Walking -->
+                <div class="campo">
+                    <label class="campo_label">Difficulty Walking</label>
+                    <select name="DiffWalk">
+                        <option value="1">Si tienes dificultad en subir escaleras</option>
+                        <option value="0">No tienes dificultad en subir escaleras</option>
+                    </select>
+                </div>
+            
+                <!-- Sex -->
+                <div class="campo">
+                    <label class="campo_label">Sex</label>
+                    <select name="Sex">
+                        <option value="1">Hombre</option>
+                        <option value="0">Mujer</option>
+                    </select>
+                </div>
+            
+                <!-- Age -->
+                <div class="campo">
+                    <label class="campo_label">Age</label>
+                    <!-- Nota: Aquí se podría considerar un campo de entrada numérico o un menú desplegable con rangos de edad predefinidos. -->
+                    <input type="number" name="Age" min="1" max="130">
+                </div>
+            
+                <!-- Education -->
+                <div class="campo">
+                    <label class="campo_label">Education</label>
+                    <select name="Education">
+                        <option value="1">Nunca has ido a la escuela</option>
+                        <option value="2">Primaria</option>
+                        <option value="3">Secundaria</option>
+                        <option value="4">Preparatoria</option>
+                        <option value="5">Universidad trunca</option>
+                        <option value="6">Universidad Terminada</option>
+                    </select>
+                </div>
+            
+                <!-- Income -->
+                <div class="campo">
+                    <label class="campo_label">Income</label>
+                    <select name="Income">
+                        <option value="1">menos de $200,000</option>
+                        <option value="2">menos de $300,000</option>
+                        <option value="3">menos de $400,000</option>
+                        <option value="4">menos de $500,000</option>
+                        <option value="5">menos de $700,000</option>
+                        <option value="6">menos de $1,000,000</option>
+                        <option value="7">menos de $1,500,000</option>
+                        <option value="8">más de $1,500,000</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar" class="boton boton--primario">
+                </div>
+            </form>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Registros de Diabetes:</h2>
+                    <div id="output"></div>
+                </div>
+            </div>
+            
+        </main>
+        <aside class="blog">
+            <h3>Algunas Enfermedades Comunes en Mexico</h3>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy" srcset="img/Denge.webp" type="image/webp">
+                        <img loading="lazy" src="img/Denge.png" alt="Imagen Blog">
+                    </picture>
+                </div>
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Dengue en México: ¡Alerta Roja! El Mosquito que Silencia Ciudades.</h4>
+                    <p>El dengue, transmitido por el mosquito Aedes aegypti, ha vuelto a azotar México con una ferocidad sin precedentes. Las ciudades más grandes están en máxima alerta mientras las autoridades de salud luchan contra el tiempo para contener el brote. </p>
+                </div>
+                <a href="https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0016-38132020000500388" class="boton boton--secundario">Leer Entrada</a>
+            </article>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy" srcset="img/Viruela.webp" type="image/webp">
+                        <img loading="lazy" src="img/Viruela.png" alt="Imagen Blog">
+                    </picture>
+                  
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Viruela en México: Las Huellas Indelebles de un Enemigo Invisible.</h4>
+                    <p>Aunque la viruela ha sido erradicada globalmente, México aún recuerda las cicatrices que esta enfermedad dejó en su población. Historiadores y médicos se unen para contar la impactante historia de esta enfermedad en tierras mexicanas. </p>
+                </div>
+                <a href="https://www.bbc.com/mundo/noticias-54924678" class="boton boton--secundario">Leer Entrada</a>
+            </article>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy" srcset="img/COVID.webp" type="image/webp">
+                        <img loading="lazy" src="img/COVID.png" alt="Imagen Blog">
+                    </picture>
+                    
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">COVID en México: Crónica de un Asedio Implacable. ¡México Resiste!</h4>
+                    <p>El COVID-19 ha presentado un desafío sin igual para México. A pesar de los obstáculos, el espíritu resiliente del país brilla mientras busca superar la pandemia. </p>
+                </div>
+                <a href="https://www.capital21.cdmx.gob.mx/noticias/?p=12574" class="boton boton--secundario">Leer Entrada</a>
+            </article>
+
+        </aside>
+    </div>
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                   <h1 class="logo__nombre no-margin centrar-texto">Estadisticas <span class="logo__bold">DeSalud</span> </h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="./Analisis.html" class="navegacion__enlace">¿Como funciona el análisis de esta pagina?</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modernizr.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
